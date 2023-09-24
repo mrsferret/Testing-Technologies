@@ -1,0 +1,4 @@
+let printOnly = () => {
+  console.log("printing");
+};
+console.log(printOnly);
