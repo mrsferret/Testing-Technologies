@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Click Event Example</title>
+  </head>
+  <body>
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+
+    <script>
+      // Step 1: Select the button elements
+      const button1 = document.getElementById("button1");
+      const button2 = document.getElementById("button2");
+
+      // Step 2: Create a function for the click event
+      function handleClick1() {
+        alert("Button 1 was clicked!");
+      }
+
+      function handleClick2() {
+        alert("Button 2 was clicked!");
+      }
+
+      // Step 3: Add the event listeners
+      button1.addEventListener("click", handleClick1);
+      button2.addEventListener("click", handleClick2);
+    </script>
+  </body>
+</html>

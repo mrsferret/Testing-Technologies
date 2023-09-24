@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors Game</h1>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <p id="result"></p>
+
+    <script>
+            // Get references to the buttons and result paragraph
+            const rock_Button = document.getElementById("rock");
+            const paper_Button = document.getElementById("paper");
+            const scissors_Button = document.getElementById("scissors");
+            const result_Text = document.getElementById("result");
+            const computer_Choice = "scissors"
+
+            // Add click event listeners to the buttons
+            rock_Button.addEventListener("click", () => displayChoice("Rock"));
+            paper_Button.addEventListener("click", () => displayChoice("Paper"));
+            scissors_Button.addEventListener("click", () =>
+              displayChoice("Scissors")
+            );
+
+            // Function to display the selected choice and custom messages
+            /*function displayChoice(choice) {
+              let message = "";
+              switch (choice) {
+                case "Rock":
+                  message = "You Rock!";
+                  break;
+                case "Paper":
+                  message = "Paper me up!";
+                  break;
+                case "Scissors":
+                  message = "Scissors, scissors on the wall!";
+                  break;
+                default:
+                  message = "Invalid choice";
+              }
+              result_Text.textContent = `You selected: ${choice} - ${message}`;
+            }*/
+
+      // Function to determine the winner
+      function determineWinner(userChoice) {
+
+                  let message = "";
+
+                  if (user_Choice === "Rock" && computer_Choice === "Scissors") {
+                      message = "You win! Rock beats Scissors.";
+                  } else if (user_Choice === "Paper" && computer_Choice === "Rock") {
+                      message = "You win! Paper covers Rock.";
+                  } else if (user_Choice === "Scissors" && computer_Choice === "Paper") {
+                      message = "You win! Scissors cut Paper.";
+                  } else if (user_Choice === computer_Choice) {
+                      message = "It's a tie!";
+                  } else {
+                      message = "Computer wins!";
+                  }
+
+                  result_Text.textContent = `You selected: ${userChoice}. ${message}`;
+    </script>
+  </body>
+</html>
