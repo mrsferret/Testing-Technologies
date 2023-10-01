@@ -3,5 +3,3 @@ node_modules/
 cypress.config.js
 package.json
 package-lock.json
-cypress/downloads/
-cypress/fixtures/
