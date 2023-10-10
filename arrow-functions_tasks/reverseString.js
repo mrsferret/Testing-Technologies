@@ -1,3 +1,5 @@
+//Convert to Arrow function
+
 //let reverseString = function (name) {
 //  return name.split("").reverse().join("");
 //};

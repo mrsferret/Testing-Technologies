@@ -1,0 +1,9 @@
+// Write arrow function for following:
+// function printOnly() {
+//    console.log("printing");
+// }
+
+let printOnly = () => {
+  console.log("printing");
+};
+console.log(printOnly);
