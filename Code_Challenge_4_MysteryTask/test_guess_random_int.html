@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Guess the Random Number Game</h1>
+    <form action="" id="guess_num_form">
+      <label for="item_name">Please input a number between 1 and 100: </label>
+      <input
+        type="number"
+        id="user_guess"
+        min="1"
+        max="100"
+        name="user_guess"
+        required
+      /><br /><br />
+      <button id="user_click" type="submit">Submit Guess</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+      //================================================================================-----------------------------------------------------------------
+      // FUnction to generate a random integer between an input min and max val
+      //============================================================================
+      // Notes:
+      // Math.random() returns a random number(dec) between 0 (included) and 1 (excluded)
+      //-----------------------------------------------------------------
+      // Math.floor() rounds the decimal number down to the nearest
+      // integer, effectively ensuring we have an integer
+      //-----------------------------------------------------------------
+
+      // so effectively we are using Math.random to generate a random number
+      // between 0 (included) and 1 (excluded). We can combine this with
+      // Math.floor to ensure we return an integer.
+
+      function get_random_int(min_val, max_val) {
+        return Math.floor(Math.random() * (max_val - min_val + 1)) + min_val;
+      }
+
+      function handle_form_submission() {
+        // Get the value of the user's guess from the input field
+        const userGuess = parseInt(document.getElementById("user_guess").value);
+
+        // Now compare the user's guess with the random number
+        if (userGuess === random_int) {
+          result_field.textContent = `Congratulations! You guessed the correct number ${random_int}`;
+        } else if (userGuess < random_int) {
+          result_field.textContent = `You guessed ${userGuess}. The correct number is higher.`;
+        } else {
+          result_field.textContent = `You guessed ${userGuess}. The correct number is lower.`;
+        }
+        return false; // Prevent the page from refreshing
+      }
+
+      // const random_int = Math.floor(Math.random() * (max - min + 1) ) + min;
+      const random_int = get_random_int(1, 100);
+
+      //==================================================================
+      // Get the form and result field
+      //==================================================================
+      // Notes:
+      // document.getElementbyID is a Javascript method to retrieve a
+      // reference to an HTML element with the specified id attribute within
+      // a web page. Part of the DOM API. This allows js to interact and
+      // manipulate the content of a web page
+      // the document object represents the entire HTML doc loaded in browser
+      //==================================================================
+      const guess_num_form = document.getElementById("guess_num_form");
+      const result_field = document.getElementById("result");
+      // Get references to the buttons,choice and result paragraphs
+      const user_click = document.getElementById("user_click");
+
+      // Add an event listener for form submission
+      //guess_num_form.addEventListener("click", () => handle_form_submission());
+      user_click.addEventListener("click", () => handle_form_submission());
+    </script>
+  </body>
+</html>

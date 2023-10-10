@@ -10,7 +10,7 @@
         background-color: black;
         color: white;
         /*   padding: 10px 20px; 
-        font-size: 16px;
+        font-size: 16px;// 
         border: none;
         margin: 5px;
         cursor: pointer; */
@@ -48,7 +48,22 @@
         //set up array of possible choices
         const choices = ["Rock", "Paper", "Scissors"];
 
+        // =========================================================================================
+        // Notes:
+        // const computer_Choice = choices[Math.floor(Math.random() * choices.length)];: This line
+        // randomly selects a choice for the computer from the choices array and stores it in a
+        // variable called computer_Choice.
+        // Math.random(): This function generates a random decimal number between 0 (inclusive)
+        // and 1 (exclusive).
+        // choices.length: This property returns the number of elements in the choices array,
+        // which is 3 in this case.
+        // Math.floor(Math.random() * choices.length): This expression generates a random integer
+        // between 0 (inclusive) and 2 (inclusive) because Math.floor() rounds down the random
+        // decimal number to the nearest integer.
+        // choices[Math.floor(Math.random() * choices.length)]: This part of the code uses the
+        // randomly generated integer as an index to access a choice from the choices array. The selected choice is then stored in the computer_Choice variable.
         // select random value from the array for computer's choice
+        // =========================================================================================
         const computer_Choice =
           choices[Math.floor(Math.random() * choices.length)];
 

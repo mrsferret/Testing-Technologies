@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- This code is for a simple game where the user has to guess a randomly 
+    generated integer. The user input number is compared against the random
+    number and an appropriate message is displayed depending whether it is 
+    greater, less than or equals the random number
+    Suggested improvements:
+    - only allow a certain number of attempts to guess the number
+    - after successfully guessing the no, reset the game -->
+    <h1>Guess the Random Number Game</h1>
+    <form action="" id="guess_num_form">
+      <label for="item_name">Please input a number between 1 and 10: </label>
+      <input
+        type="number"
+        id="user_guess"
+        min="1"
+        max="10"
+        name="user_guess"
+        required
+      /><br /><br />
+      <button type="submit">Submit Guess</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+      //================================================================================
+      // FUnction to generate a random integer between an input min and max val
+      //============================================================================
+      // Notes:
+      // Math.random() returns a random number(dec) between 0 (included) and 1 (excluded)
+      //-----------------------------------------------------------------
+      // Math.floor() rounds the decimal number down to the nearest
+      // integer, effectively ensuring we have an integer
+      //-----------------------------------------------------------------
+
+      // so effectively we are using Math.random to generate a random number
+      // between 0 (included) and 1 (excluded). We can combine this with
+      // Math.floor to ensure we return an integer.
+
+      function get_random_int(min_val, max_val) {
+        return Math.floor(Math.random() * (max_val - min_val + 1)) + min_val;
+      }
+
+      //==================================================================
+      // call function to generate random number, passing in the min and
+      // max number limits via parameters
+      //==================================================================
+      random_int = get_random_int(1, 10);
+
+      //==================================================================
+      // Get the form and result field
+      //==================================================================
+      // Notes:
+      // document.getElementbyID is a Javascript method to retrieve a
+      // reference to an HTML element with the specified id attribute within
+      // a web page. Part of the DOM API. This allows js to interact and
+      // manipulate the content of a web page
+      // the document object represents the entire HTML doc loaded in browser
+      //==================================================================
+      const guess_num_form = document.getElementById("guess_num_form");
+      const result_field = document.getElementById("result");
+      //==================================================================
+      // Add an event listener for form submission
+      //==================================================================
+      // Note
+      // the preventDefault() method cancels an event if it is able to be
+      // cancelled ie. the default action will not occur. In this case it
+      // will prevent the page from refreshing. If this is left out, the page
+      // automatically refreshes and the result message will only flash up
+      // on the screen and disappear.
+      // The addEventListener method is calling an anonymous function (e)
+      // Anonymous functions don't have a specified name. They are defined
+      // directly where they are needed or assigned to a variable
+      //==================================================================
+      guess_num_form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+        //==================================================================
+        // the following code could be improved by putting into a function
+        //==================================================================
+        // Get the value of the user's guess from the input field
+        //==================================================================
+        // parseint is used to convert the user's input into an integer
+        //==================================================================
+        const userGuess = parseInt(document.getElementById("user_guess").value);
+
+        // Now compare the user's guess with the random number and displau an
+        // appropriate message on screen
+        if (userGuess === random_int) {
+          result_field.textContent = `Congratulations! You guessed the correct number ${random_int}`;
+        } else if (userGuess < random_int) {
+          result_field.textContent = `You guessed ${userGuess}. The correct number is higher.`;
+        } else {
+          result_field.textContent = `You guessed ${userGuess}. The correct number is lower.`;
+        }
+      });
+    </script>
+  </body>
+</html>
