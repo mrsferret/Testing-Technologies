@@ -1,7 +1,14 @@
-// Challenge 2
-
-// Coding Task 2 - Encapsulation
-
+// Challenge 2 - Encapsulation
+//======================================================================================================
+// Encapsulation - allows you to hide the internal workings of an object from the outside world.
+// Protects data from unintended modifications and ensures that the object's behaviour is consistent
+// Encapsulation gives yu
+// - Better control of class properties and methods
+// - Class properties can be read-only (getters) or write-only (setters)
+// - flexibility as can change  one part of the code without affecting the other parts
+// - increased security of data
+//======================================================================================================
+//
 // Get and Set Methods
 // Using the User class created challenge_2_1:
 //

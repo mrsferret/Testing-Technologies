@@ -1,6 +1,32 @@
 // Challenge 2
-
 // Coding Task 5 - Abstraction
+//=================================================================================================================
+// Abstraction is an extension of encapsulation that uses classes and objects, which contain data and code,
+// to hide the internal details of a program from its users. This is done by creatinga layer of abstraction between the user and
+// the more complex source code  which helps protect sensitive information store withing the source code
+// ie we can hide the implementation detail of a method and only expose the important things or attributes ti the user
+// In OOP
+//  - a class is like a blueprint for creating objects, like a recipe
+//  - methods are functions defined inside the class. They are the actions an object can perform
+//  - objects are instance created based on a class.
+//
+// An Abstract class
+//  - is like a partial blueprint. It's not meant to be fully used on its own. It is designed to be extended by other classes
+//  - can have regular methods with some default behaviour
+//  - can have abstract methods which are methods that are declared but have no implementatopm
+
+// Abstract Method
+//  - is like a placeholder for a method. It's declared in the abstract class but doesn't have any code inside it
+//  - when a class extends from an abstract class it must provide implementations for all the abstract methods declared in
+//  - the parent abstarct class
+
+// Why use them?
+// - help ensure that specific behaviour is implemented in child classes
+// - they are useful when you have a set of classes that share some common methods but also have unique behaviours. The common
+//   mwthods can go in the abstract class while each child class provides its own implementation for the abstract methods
+//
+// Simply - abstract classes and methods ensure that different objects (like circles and rectangles) of related types follow
+// certain rules while allowing each object to have its own unique behaviour
 
 // In this task , we will create an abstract User class and two child classes (Admin and Viewer classes) that inherit from the abstract class.
 

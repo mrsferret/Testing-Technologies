@@ -1,7 +1,17 @@
 // Challenge 2
 // Coding Task 3 - Inheritance (Subclass and Superclass)
-
-//In this task your are required to create an Admin class,
+//======================================================================================================
+// Notes:
+// Inheritance allows you to create new classes by inheriting properties and methods from existing classes
+// This promotes code reuse and helps in building hierarchies of related classes in your code
+// So in code we can extend our parent class to child class:
+// eg. if there is a class named Animal and second class Duck so the Duck can be inherited from the Animal class
+// in JavaScript this is know as prototyping ie. a template for another ibject to inherit properties and
+// behaviours.
+// As well as inheriting properties from the parent class, the child class can also have its own specific
+// properties.
+//======================================================================================================
+// In this task your are required to create an Admin class,
 // which is a  child class of the User  class:
 
 //1. Create a  User class:
@@ -16,6 +26,7 @@
 
 //3. Create an object admin out of the class Admin:
 //  § Set its name to "Balthazar" and say hello to the user.
+//======================================================================================================
 
 class User {
   constructor(username) {
