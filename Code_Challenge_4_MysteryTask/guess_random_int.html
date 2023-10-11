@@ -87,8 +87,14 @@
       // Anonymous functions don't have a specified name. They are defined
       // directly where they are needed or assigned to a variable
       //==================================================================
-      guess_num_form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting normally
+      //guess_num_form.addEventListener("submit", function (event) {
+      //  event.preventDefault(); // Prevent the form from submitting normally
+
+      // converted anonymous function into arrow function by replacing the
+      // function (event) part with (event) => (makes it more concise)
+      guess_num_form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        //});
         //==================================================================
         // the following code could be improved by putting into a function
         //==================================================================
