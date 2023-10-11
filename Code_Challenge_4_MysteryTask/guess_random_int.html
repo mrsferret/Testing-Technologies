@@ -7,12 +7,13 @@
   </head>
   <body>
     <!-- This code is for a simple game where the user has to guess a randomly 
-    generated integer. The user input number is compared against the random
-    number and an appropriate message is displayed depending whether it is 
-    greater, less than or equals the random number
+    generated integer between 1 and 10 inclusive. The user input guess is compared
+    against the random number and an appropriate message is displayed depending 
+    whether it is greater, less than or equals the random number
     Suggested improvements:
     - only allow a certain number of attempts to guess the number
-    - after successfully guessing the no, reset the game -->
+    - after successfully guessing the no, reset the game 
+  -->
     <h1>Guess the Random Number Game</h1>
     <form action="" id="guess_num_form">
       <label for="item_name">Please input a number between 1 and 10: </label>
@@ -21,7 +22,6 @@
         id="user_guess"
         min="1"
         max="10"
-        name="user_guess"
         required
       /><br /><br />
       <button type="submit">Submit Guess</button>
@@ -45,6 +45,14 @@
       // Math.floor to ensure we return an integer.
 
       function get_random_int(min_val, max_val) {
+        //-----------------------------------------------------------------
+        // (max_val - min_val + 1): This part calculates the range of values you want.
+        // For instance, if min_val is 1 and max_val is 100 - the range would be
+        // 100 - 1 + 1 = 100.
+        //-----------------------------------------------------------------
+        // By adding min_val, we are shifting the range from starting at 0
+        // to starting at the specified min_val
+        //-----------------------------------------------------------------
         return Math.floor(Math.random() * (max_val - min_val + 1)) + min_val;
       }
 
@@ -75,12 +83,12 @@
       // will prevent the page from refreshing. If this is left out, the page
       // automatically refreshes and the result message will only flash up
       // on the screen and disappear.
-      // The addEventListener method is calling an anonymous function (e)
+      // The addEventListener method is calling an anonymous function (event)
       // Anonymous functions don't have a specified name. They are defined
       // directly where they are needed or assigned to a variable
       //==================================================================
-      guess_num_form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent the form from submitting normally
+      guess_num_form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
         //==================================================================
         // the following code could be improved by putting into a function
         //==================================================================

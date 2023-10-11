@@ -1,6 +1,6 @@
 // traditional function
 //function greet(name) {
-//    return "hello, my name is " + name
+//    return "Hi " + name
 // }
 
 let greet = (name) => `Hi ${name}!`;
