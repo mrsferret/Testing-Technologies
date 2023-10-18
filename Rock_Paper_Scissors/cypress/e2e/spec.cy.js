@@ -45,7 +45,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
 
   // Check rock button combinations
 
-  it("checks messgae when rock button clicked and computer chooses rock", () => {
+  it("checks message when rock button clicked and computer chooses rock", () => {
     cy.get('[data-cy="rock"]').click();
 
     // select the computer choice message
