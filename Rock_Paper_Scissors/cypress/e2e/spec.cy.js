@@ -48,7 +48,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when rock button clicked and computer chooses rock", () => {
     cy.get('[data-cy="rock"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = rock
       if ($computer_choice.text().includes("Rock")) {
@@ -62,7 +62,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when rock button clicked and computer chooses paper", () => {
     cy.get('[data-cy="rock"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = paper
       if ($computer_choice.text().includes("Paper")) {
@@ -76,7 +76,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when rock button clicked and computer chooses scissors", () => {
     cy.get('[data-cy="rock"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = scissors
       if ($computer_choice.text().includes("Scissors")) {
@@ -94,7 +94,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when paper button clicked and computer chooses paper", () => {
     cy.get('[data-cy="paper"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = paper
       if ($computer_choice.text().includes("Paper")) {
@@ -108,7 +108,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when paper button clicked and computer chooses scissors", () => {
     cy.get('[data-cy="paper"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = scissors
       if ($computer_choice.text().includes("Scissors")) {
@@ -122,7 +122,7 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when paper button clicked and computer chooses rock", () => {
     cy.get('[data-cy="paper"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
       // computer choice = rock
       if ($computer_choice.text().includes("Rock")) {
@@ -140,9 +140,9 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks message when scissors button clicked and computer chooses paper", () => {
     cy.get('[data-cy="scissors"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
-      // Correct the condition to use the '.text()' method
+      // computer choice = paper
       if ($computer_choice.text().includes("Paper")) {
         cy.get('[data-cy="result"]')
           .should("be.visible")
@@ -155,11 +155,10 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   });
 
   it("checks messgae when scissors button clicked and computer chooses scissors", () => {
-    cy.get('[data-cy="paper"]').click();
-
-    // Correct the selector for 'data-cy="choice"'
+    cy.get('[data-cy="scissors"]').click();
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
-      // Correct the condition to use the '.text()' method
+      // computer choice = scissors
       if ($computer_choice.text().includes("Scissors")) {
         cy.get('[data-cy="result"]')
           .should("be.visible")
@@ -171,9 +170,9 @@ describe("Testing Rock, Paper, Scissors Game", () => {
   it("checks messgae when scissors button clicked and computer chooses rock", () => {
     cy.get('[data-cy="scissors"]').click();
 
-    // Correct the selector for 'data-cy="choice"'
+    // select the computer choice message
     cy.get('[data-cy="choice"]').then(($computer_choice) => {
-      // Correct the condition to use the '.text()' method
+      // computer choice = rock
       if ($computer_choice.text().includes("Rock")) {
         cy.get('[data-cy="result"]')
           .should("be.visible")
