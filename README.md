@@ -13,7 +13,7 @@ Knowledge was consolidated by both individual and collaborative group coding act
 
  
 * Software Testing
-    * Research Activity
+    * [Research Activity](/Software%20Testing%20Activity.docx)
 * Cypress.io and e2e Testing
     * Setting Up Tests Activities
     * Code Challenge 3 (group)
