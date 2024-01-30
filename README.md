@@ -9,7 +9,9 @@ Knowledge was consolidated by both individual and collaborative group coding act
     * Arrow Functions Activity
     * Code Challenge 1
 * OOP in Vanilla JS
-    * Code Challenge 2
+    * Code Challenge 2 - [OOP challenges](/OOP_Tasks)
+
+ 
 * Software Testing
     * Research Activity
 * Cypress.io and e2e Testing
