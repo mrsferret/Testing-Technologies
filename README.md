@@ -5,7 +5,7 @@ Knowledge was consolidated by both individual and collaborative group coding act
 
 * Version Control with Git, Github and VS Code
 * Vanilla JS (ES6) and Node.js
-    * Rock Paper Scissors Activity
+    * [Rock Paper Scissors Activity](/Rock_Paper_Scissors)
     * Arrow Functions Activity
     * Code Challenge 1
 * OOP in Vanilla JS
