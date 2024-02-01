@@ -15,7 +15,7 @@ Knowledge was consolidated by both individual and collaborative group coding act
 * Software Testing
     * [Research Activity](/Software%20Testing%20Activity.docx)
 * Cypress.io and e2e Testing
-    * Setting Up Tests Activities
+    * [Setting Up Tests Activities](/Cypress/Cypress-Test)
     * Code Challenge 3 (group)
         * Build a Basic Calculator App
         * Test App using Cypress.io 
