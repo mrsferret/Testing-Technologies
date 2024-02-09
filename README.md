@@ -21,6 +21,7 @@ Knowledge was consolidated by both individual and collaborative group coding act
         * [Test App using Cypress.io](/Calculator_Project_Team_1(copy)/cypress/e2e)
     * Code Challenge 4 (GROUP CHALLENGE)
         * [Build a Shopping List App](/Shopping_List_App)
+        * [Test the App using Cypress.io](Shopping_List_App/shopping_list.cy.js)
 
 
     
