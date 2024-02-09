@@ -18,7 +18,7 @@ Knowledge was consolidated by both individual and collaborative group coding act
     * [Setting Up Tests Activities](/Cypress/Cypress-Test)
     * Code Challenge 3 (group)
         * [Build a Basic Calculator App](/Calculator_Project_Team_1(copy))
-        * Test App using Cypress.io 
+        * [Test App using Cypress.io](/Calculator_Project_Team_1(copy)/cypress/e2e)
 
 
     
